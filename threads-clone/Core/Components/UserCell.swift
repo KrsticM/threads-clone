@@ -5,14 +5,14 @@ struct UserCell: View {
     
     var body: some View {
         HStack {
-            CircularProfileImageView()
+            CircularProfileImageView(user: user, size: .small)
             
             VStack(alignment: .leading, spacing: 2) {
-                Text("maxverstappen1")
+                Text(user.username)
                     
                     .fontWeight(.semibold)
                 
-                Text("Max Verstappen")
+                Text(user.fullname)
             }.font(.footnote)
             
             Spacer()
