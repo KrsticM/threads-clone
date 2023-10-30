@@ -1,11 +1,13 @@
 import SwiftUI
 
 struct UserCell: View {
+    let user: User
+    
     var body: some View {
         HStack {
             CircularProfileImageView()
             
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 2) {
                 Text("maxverstappen1")
                     
                     .fontWeight(.semibold)
@@ -29,5 +31,6 @@ struct UserCell: View {
 }
 
 #Preview {
-    UserCell()
+    let user = User(id: UUID().uuidString, fullname: "Max Verstappen", email: "max@gmail.com", username: "maxverstappen1")
+    return UserCell(user: user)
 }
