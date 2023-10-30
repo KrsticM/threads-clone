@@ -1,5 +1,6 @@
 import Foundation
 
+@MainActor
 class FeedViewModel: ObservableObject {
     @Published var threads = [Thread]()
     
